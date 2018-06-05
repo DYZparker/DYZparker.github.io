@@ -27,6 +27,13 @@
   
     
     <entry>
+      <title>tags</title>
+      <link href="/tags/index.html"/>
+      <url>/tags/index.html</url>
+      <content type="html"><![CDATA[]]></content>
+    </entry>
+    
+    <entry>
       <title>about</title>
       <link href="/about/index.html"/>
       <url>/about/index.html</url>
@@ -37,13 +44,6 @@
       <title>categoeies</title>
       <link href="/categoeies/index.html"/>
       <url>/categoeies/index.html</url>
-      <content type="html"><![CDATA[]]></content>
-    </entry>
-    
-    <entry>
-      <title>tags</title>
-      <link href="/tags/index.html"/>
-      <url>/tags/index.html</url>
       <content type="html"><![CDATA[]]></content>
     </entry>
     
