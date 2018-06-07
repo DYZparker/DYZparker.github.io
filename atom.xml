@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2018-06-05T08:20:20.743Z</updated>
+  <updated>2018-06-07T13:55:49.395Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -17,11 +17,37 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>HTTP协议</title>
+    <link href="http://yoursite.com/2018/06/05/HTTP%E5%8D%8F%E8%AE%AE/"/>
+    <id>http://yoursite.com/2018/06/05/HTTP协议/</id>
+    <published>2018-06-05T08:50:33.000Z</published>
+    <updated>2018-06-07T13:55:49.395Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h2 id=&quot;基础概念&quot;&gt;&lt;a href=&quot;#基础概念&quot; class=&quot;headerlink&quot; title=&quot;基础概念&quot;&gt;&lt;/a&gt;基础概念&lt;/h2&gt;&lt;h3 id=&quot;介绍&quot;&gt;&lt;a href=&quot;#介绍&quot; class=&quot;headerlink&quot;
+        
+      
+    
+    </summary>
+    
+      <category term="笔记" scheme="http://yoursite.com/categories/%E7%AC%94%E8%AE%B0/"/>
+    
+    
+      <category term="HTTP" scheme="http://yoursite.com/tags/HTTP/"/>
+    
+  </entry>
+  
+  <entry>
     <title>第一篇博客</title>
     <link href="http://yoursite.com/2018/06/05/%E7%AC%AC%E4%B8%80%E7%AF%87%E5%8D%9A%E5%AE%A2/"/>
     <id>http://yoursite.com/2018/06/05/第一篇博客/</id>
     <published>2018-06-05T08:18:42.000Z</published>
-    <updated>2018-06-05T08:20:20.743Z</updated>
+    <updated>2018-06-05T08:29:14.267Z</updated>
     
     <summary type="html">
     

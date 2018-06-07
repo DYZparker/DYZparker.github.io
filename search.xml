@@ -3,10 +3,31 @@
   
     
     <entry>
+      <title>HTTP协议</title>
+      <link href="/2018/06/05/HTTP%E5%8D%8F%E8%AE%AE/"/>
+      <url>/2018/06/05/HTTP%E5%8D%8F%E8%AE%AE/</url>
+      <content type="html"><![CDATA[<h2 id="基础概念"><a href="#基础概念" class="headerlink" title="基础概念"></a>基础概念</h2><h3 id="介绍"><a href="#介绍" class="headerlink" title="介绍"></a>介绍</h3><p>HTTP协议（HyperText Transfer Protocol，超文本传输协议）是用于从WWW服务器传输超文本到本地浏览器的传送协议。它可以使浏览器更加高效，使网络传输减少。它不仅保证计算机正确快速地传输超文本文档，还确定传输文档中的哪一部分，以及哪部分内容首先显示(如文本先于图形)等。</p><h3 id="在TCP-IP协议栈中的位置"><a href="#在TCP-IP协议栈中的位置" class="headerlink" title="在TCP/IP协议栈中的位置"></a>在TCP/IP协议栈中的位置</h3><p>HTTP协议通常承载于TCP协议之上，有时也承载于TLS或SSL协议层之上，这个时候，就成了我们常说的HTTPS。默认HTTP的端口号为80，HTTPS的端口号为443。</p><p><img src="https://raw.githubusercontent.com/DYZparker/MarkdownPhotos/master/img/http1.jpg" alt=""></p><h3 id="HTTP的请求响应模型"><a href="#HTTP的请求响应模型" class="headerlink" title="HTTP的请求响应模型"></a>HTTP的请求响应模型</h3><p>HTTP协议永远都是客户端发起请求，服务器回送响应。HTTP协议是一个无状态的协议，同一个客户端的这次请求和上次请求是没有对应关系。</p><p><img src="https://raw.githubusercontent.com/DYZparker/MarkdownPhotos/master/img/http2.jpg" alt=""></p><h3 id="工作流程"><a href="#工作流程" class="headerlink" title="工作流程"></a>工作流程</h3><p>一次HTTP操作称为一个事务，其工作过程可分为四步：</p><ol><li>首先客户机与服务器需要建立连接。</li><li>客户机发送一个请求给服务器，请求方式的格式为：统一资源标识符（URL）、协议版本号，后边是MIME信息包括请求修饰符、客户机信息和可能的内容。</li><li>服务器接到请求后，给予相应的响应信息，其格式为一个状态行，包括信息的协议版本号、一个成功或错误的代码，后边是MIME信息包括服务器信息、实体信息和可能的内容。</li><li>客户端接收服务器所返回的信息通过浏览器显示在用户的显示屏上，然后客户机与服务器断开连接。</li></ol><p>如果在以上过程中的某一步出现错误，那么产生错误的信息将返回到客户端，有显示屏输出。</p><h2 id="协议详解"><a href="#协议详解" class="headerlink" title="协议详解"></a>协议详解</h2><h3 id="HTTP-1-0和HTTP-1-1的比较"><a href="#HTTP-1-0和HTTP-1-1的比较" class="headerlink" title="HTTP/1.0和HTTP/1.1的比较"></a>HTTP/1.0和HTTP/1.1的比较</h3><h4 id="建立连接方面"><a href="#建立连接方面" class="headerlink" title="建立连接方面"></a>建立连接方面</h4><ol><li>HTTP/1.0 每次请求都需要建立新的TCP连接，连接不能复用。</li><li>HTTP/1.1 新的请求可以在上次请求建立的TCP连接之上发送，连接可以复用。优点是减少重复进行TCP三次握手的开销，提高效率。</li></ol><p>注意：在同一个TCP连接中，新的请求需要等上次请求收到响应后，才能发送。</p><h4 id="Host域"><a href="#Host域" class="headerlink" title="Host域"></a>Host域</h4><p>HTTP1.1在Request消息头里头多了一个Host域, HTTP1.0则没有这个域</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs undefined">GET /pub/WWW/TheProject.html HTTP/1.1<br>Host: www.w3.org<br></code></pre></td></tr></table></figure><h3 id="HTTP请求消息"><a href="#HTTP请求消息" class="headerlink" title="HTTP请求消息"></a>HTTP请求消息</h3><p>请求行  //= 方法 [空格] 请求URI [空格] 版本号 ,如GET /hello.htm HTTP/1.1</p><p>通用信息头|请求头|实体头</p><p>CRLF(回车换行)</p><p>实体内容</p><h3 id="HTTP响应消息"><a href="#HTTP响应消息" class="headerlink" title="HTTP响应消息"></a>HTTP响应消息</h3><p>状态行  //= 版本号 [空格] 状态码 [空格] 原因 ,如HTTP/1.1 200 OK</p><p>通用信息头|响应头|实体头</p><p>CRLF(回车换行)</p><p>实体内容</p><h3 id="常用的请求方式"><a href="#常用的请求方式" class="headerlink" title="常用的请求方式"></a>常用的请求方式</h3><ul><li>GET方式：是以实体的方式得到由请求URI所指定资源的信息，如果请求URI只是一个数据产生过程，那么最终要在响应实体中返回的是处理过程的结果所指向的资源，而不是处理过程的描述。</li><li>POST方式：用来向目的服务器发出请求，要求它接受被附在请求后的实体，并把它当作请求队列中请求URI所指定资源的附加新子项，Post被设计成用统一的方法实现下列功能：</li></ul><p><img src="https://raw.githubusercontent.com/DYZparker/MarkdownPhotos/master/img/http3.png" alt=""></p><h3 id="请求头"><a href="#请求头" class="headerlink" title="请求头"></a>请求头</h3><h3 id="响应头"><a href="#响应头" class="headerlink" title="响应头"></a>响应头</h3><h3 id="实体头"><a href="#实体头" class="headerlink" title="实体头"></a>实体头</h3><h3 id="扩展头"><a href="#扩展头" class="headerlink" title="扩展头"></a>扩展头</h3><h2 id="深入了解"><a href="#深入了解" class="headerlink" title="深入了解"></a>深入了解</h2>]]></content>
+      
+      <categories>
+          
+          <category> 笔记 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> HTTP </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    <entry>
       <title>第一篇博客</title>
       <link href="/2018/06/05/%E7%AC%AC%E4%B8%80%E7%AF%87%E5%8D%9A%E5%AE%A2/"/>
       <url>/2018/06/05/%E7%AC%AC%E4%B8%80%E7%AF%87%E5%8D%9A%E5%AE%A2/</url>
-      <content type="html"><![CDATA[<p>学习前端已有一年多了，基础知识也陆陆续续的学完了，但是仍需巩固和提升，因此借助hexo在github平台上搭建了一个博客，记录一些学习心得和体会</p><h3 id="学习目标"><a href="#学习目标" class="headerlink" title="学习目标"></a>学习目标</h3><ul><li><p>熟练掌握HTML+CSS+JS基础知识</p></li><li><p>逐步学习和提升H5、CSS3/ES6知识点</p></li><li><p>能运用Vue框架搭建项目</p></li><li><p>其他知识点也应学习并记录，如HTTP、JSON、Webpack、Less等</p></li></ul><h3 id="鼓励自己"><a href="#鼓励自己" class="headerlink" title="鼓励自己"></a>鼓励自己</h3><ul><li><p>困难不可怕，用时间去征服它</p></li><li><p>知识点繁杂，反复记忆和练习</p></li><li><p>多看不如多敲代码</p></li><li><p>笔记很重要</p></li><li><p>周期性回顾</p></li></ul>]]></content>
+      <content type="html"><![CDATA[<p>学习前端已有一年多了，基础知识也陆陆续续的学完了，但是仍需巩固和提升，因此借助hexo在github平台上搭建了一个博客，记录一些学习心得和体会</p><h3 id="学习目标"><a href="#学习目标" class="headerlink" title="学习目标"></a>学习目标</h3><ul><li><p>熟练掌握HTML+CSS+JS基础知识</p></li><li><p>逐步学习和提升H5、CSS3、ES6知识点</p></li><li><p>能熟练运用Vue框架搭建项目</p></li><li><p>其他知识点的跟进，如HTTP、JSON、Webpack、Less等</p></li><li><p>移动端</p></li></ul><h3 id="鼓励自己"><a href="#鼓励自己" class="headerlink" title="鼓励自己"></a>鼓励自己</h3><ul><li><p>困难不可怕，用时间去征服它</p></li><li><p>知识点繁杂，反复记忆和练习</p></li><li><p>多看不如多敲代码</p></li><li><p>笔记很重要</p></li><li><p>周期性回顾</p></li></ul>]]></content>
       
       <categories>
           
@@ -34,16 +55,16 @@
     </entry>
     
     <entry>
-      <title>categoeies</title>
-      <link href="/categoeies/index.html"/>
-      <url>/categoeies/index.html</url>
+      <title>tags</title>
+      <link href="/tags/index.html"/>
+      <url>/tags/index.html</url>
       <content type="html"><![CDATA[]]></content>
     </entry>
     
     <entry>
-      <title>tags</title>
-      <link href="/tags/index.html"/>
-      <url>/tags/index.html</url>
+      <title>categoeies</title>
+      <link href="/categoeies/index.html"/>
+      <url>/categoeies/index.html</url>
       <content type="html"><![CDATA[]]></content>
     </entry>
     
