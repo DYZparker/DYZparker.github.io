@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2018-06-07T13:55:49.395Z</updated>
+  <updated>2018-06-26T07:54:35.437Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,6 +15,34 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>canvas动画</title>
+    <link href="http://yoursite.com/2018/06/26/canvas%E5%8A%A8%E7%94%BB/"/>
+    <id>http://yoursite.com/2018/06/26/canvas动画/</id>
+    <published>2018-06-26T01:14:34.000Z</published>
+    <updated>2018-06-26T07:54:35.437Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h2 id=&quot;用户交互&quot;&gt;&lt;a href=&quot;#用户交互&quot; class=&quot;headerlink&quot; title=&quot;用户交互&quot;&gt;&lt;/a&gt;用户交互&lt;/h2&gt;&lt;h3 id=&quot;事件和事件执行&quot;&gt;&lt;a href=&quot;#事件和事件执行&quot; class=&quot;headerlink&quot;
+        
+      
+    
+    </summary>
+    
+      <category term="笔记" scheme="http://yoursite.com/categories/%E7%AC%94%E8%AE%B0/"/>
+    
+    
+      <category term="H5" scheme="http://yoursite.com/tags/H5/"/>
+    
+      <category term="canvas" scheme="http://yoursite.com/tags/canvas/"/>
+    
+  </entry>
   
   <entry>
     <title>HTTP协议</title>
