@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2019-09-24T08:08:51.596Z</updated>
+  <updated>2019-09-25T02:22:54.262Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -17,11 +17,25 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>类型判断</title>
+    <link href="http://yoursite.com/2019/09/25/%E7%B1%BB%E5%9E%8B%E5%88%A4%E6%96%AD/"/>
+    <id>http://yoursite.com/2019/09/25/类型判断/</id>
+    <published>2019-09-25T02:22:54.000Z</published>
+    <updated>2019-09-25T02:22:54.262Z</updated>
+    
+    <summary type="html">
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
     <title>canvas</title>
-    <link href="http://yoursite.com/2018/06/26/canvas/"/>
-    <id>http://yoursite.com/2018/06/26/canvas/</id>
-    <published>2018-06-26T01:14:34.000Z</published>
-    <updated>2019-09-24T08:08:51.596Z</updated>
+    <link href="http://yoursite.com/2019/08/26/canvas/"/>
+    <id>http://yoursite.com/2019/08/26/canvas/</id>
+    <published>2019-08-26T01:14:34.000Z</published>
+    <updated>2019-09-25T02:26:09.070Z</updated>
     
     <summary type="html">
     
@@ -46,10 +60,10 @@
   
   <entry>
     <title>HTTP协议</title>
-    <link href="http://yoursite.com/2018/06/05/HTTP%E5%8D%8F%E8%AE%AE/"/>
-    <id>http://yoursite.com/2018/06/05/HTTP协议/</id>
-    <published>2018-06-05T08:50:33.000Z</published>
-    <updated>2018-06-07T13:55:49.395Z</updated>
+    <link href="http://yoursite.com/2019/08/05/HTTP%E5%8D%8F%E8%AE%AE/"/>
+    <id>http://yoursite.com/2019/08/05/HTTP协议/</id>
+    <published>2019-08-05T08:50:33.000Z</published>
+    <updated>2019-09-25T02:25:22.305Z</updated>
     
     <summary type="html">
     
@@ -67,33 +81,6 @@
     
     
       <category term="HTTP" scheme="http://yoursite.com/tags/HTTP/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>第一篇博客</title>
-    <link href="http://yoursite.com/2018/06/05/%E7%AC%AC%E4%B8%80%E7%AF%87%E5%8D%9A%E5%AE%A2/"/>
-    <id>http://yoursite.com/2018/06/05/第一篇博客/</id>
-    <published>2018-06-05T08:18:42.000Z</published>
-    <updated>2018-06-05T08:29:14.267Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;p&gt;学习前端已有一年多了，基础知识也陆陆续续的学完了，但是仍需巩固和提升，因此借助hexo在github平台上搭建了一个博客，记录一些学习心得和体会&lt;/p&gt;
-&lt;h3 id=&quot;学习目标&quot;&gt;&lt;a href=&quot;#学习目标&quot; class=&quot;headerlink&quot;
-        
-      
-    
-    </summary>
-    
-      <category term="笔记" scheme="http://yoursite.com/categories/%E7%AC%94%E8%AE%B0/"/>
-    
-    
-      <category term="随笔" scheme="http://yoursite.com/tags/%E9%9A%8F%E7%AC%94/"/>
     
   </entry>
   
